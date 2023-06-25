@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CuisineQuest</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <img src="../static/images/cuisinequest_logo.png" id="logo" alt="Logo" />
+        <h1>Let's get cooking!</h1>
+    </header>
+    <div class="half-bg"></div>
+    <div class="content">
+
+
+<div class="ingredient-section">
+    <h5>Add your ingredients that you want to cook with one by one</h5>
+    <form id="ingredients-form" action="#">
+        <div id="ingredients-list">
+            <div class="ingredient">
+                <input type="text" class="ingredient-input" placeholder="Enter Ingredient">
+                <button class="btn add-remove-btn" type="button">+</button>
+            </div>
+        </div>
+
+    <div class="checkbox-overall">
+        <h2>Meal Type (optional)</h2>
+        <div class="checkbox-section"> 
+            <label><input type="checkbox" class="mealType" value="main course"> Main course</label>
+            <label><input type="checkbox" class="mealType" value="side dish"> Side dish</label>
+            <label><input type="checkbox" class="mealType" value="dessert"> Dessert</label>
+        </div>
+        <div class="checkbox-section">
+            <label><input type="checkbox" class="mealType" value="appetizer"> Appetizer</label>
+            <label><input type="checkbox" class="mealType" value="salad"> Salad</label>
+            <label><input type="checkbox" class="mealType" value="bread"> Bread</label>
+        </div>
+        <div class="checkbox-section">
+            <label><input type="checkbox" class="mealType" value="breakfast"> Breakfast</label>
+            <label><input type="checkbox" class="mealType" value="soup"> Soup</label>
+            <label><input type="checkbox" class="mealType" value="beverage"> Beverage</label>
+        </div>
+        <div class="checkbox-section">
+            <label><input type="checkbox" class="mealType" value="sauce"> Sauce</label>
+            <label><input type="checkbox" class="mealType" value="marinade"> Marinade</label>
+            <label><input type="checkbox" class="mealType" value="fingerfood"> Fingerfood</label>
+        </div>
+        <div class="checkbox-section">
+            <label><input type="checkbox" class="mealType" value="snack"> Snack</label>
+            <label><input type="checkbox" class="mealType" value="drink"> Drink</label>
+            <label></label>
+        </div>
+    </div>
+
+    <div class="checkbox-overall">
+        <h2>Diet Labels (optional)</h2>
+        <div class="checkbox-section">
+            <label><input type="checkbox" class="diet" value="gluten free"> Gluten Free</label>
+            <label><input type="checkbox" class="diet" value="ketogenic"> Ketogenic</label>
+            <label><input type="checkbox" class="diet" value="vegetarian"> Vegetarian</label>
+            <label><input type="checkbox" class="diet" value="lacto-vegetarian"> Lacto-Vegetarian</label>
+            <label><input type="checkbox" class="diet" value="ovo-vegetarian"> Ovo-Vegetarian</label>
+            <label><input type="checkbox" class="diet" value="vegan"> Vegan</label>
+            <label><input type="checkbox" class="diet" value="pescetarian"> Pescetarian</label>
+            <label><input type="checkbox" class="diet" value="paleo"> Paleo</label>
+            <label><input type="checkbox" class="diet" value="primal"> Primal</label>
+            <label><input type="checkbox" class="diet" value="low fodmap"> Low FODMAP</label>
+            <label><input type="checkbox" class="diet" value="whole30"> Whole30</label>
+            <label></label>
+        </div>
+    </div>
+
+    <div class="checkbox-overall">
+        <h2>Restrictions/Intolerances (optional)</h2>
+        <div class="checkbox-section">
+            <label><input type="checkbox" class="intolerances" value="dairy"> Dairy</label>
+            <label><input type="checkbox" class="intolerances" value="egg"> Egg</label>
+            <label><input type="checkbox" class="intolerances" value="gluten"> Gluten</label>
+        </div>
+        <div class="checkbox-section">
+            <label><input type="checkbox" class="intolerances" value="grain"> Grain</label>
+            <label><input type="checkbox" class="intolerances" value="peanut"> Peanut</label>
+            <label><input type="checkbox" class="intolerances" value="seafood"> Seafood</label>
+        </div>
+        <div class="checkbox-section">
+            <label><input type="checkbox" class="intolerances" value="sesame"> Sesame</label>
+            <label><input type="checkbox" class="intolerances" value="shellfish"> Shellfish</label>
+            <label><input type="checkbox" class="intolerances" value="soy"> Soy</label>
+        </div>
+        <div class="checkbox-section">
+            <label><input type="checkbox" class="intolerances" value="sulfite"> Sulfite</label>
+            <label><input type="checkbox" class="intolerances" value="tree nut"> Tree Nut</label>
+            <label><input type="checkbox" class="intolerances" value="wheat"> Wheat</label>
+        </div>
+        
+    <div class="checkbox-overall">
+        <h2>Cuisine Type (optional)</h2>
+        <div class="checkbox-section">
+            <label><input type="checkbox" class="cuisine" value="african"> African</label>
+            <label><input type="checkbox" class="cuisine" value="asian"> Asian</label>
+            <label><input type="checkbox" class="cuisine" value="american"> American</label>
+        </div>
+        <div class="checkbox-section">
+            <label><input type="checkbox" class="cuisine" value="british"> British</label>
+            <label><input type="checkbox" class="cuisine" value="cajun"> Cajun</label>
+            <label><input type="checkbox" class="cuisine" value="caribbean"> Caribbean</label>
+        </div>
+        <div class="checkbox-section">
+            <label><input type="checkbox" class="cuisine" value="chinese"> Chinese</label>
+            <label><input type="checkbox" class="cuisine" value="eastern european"> Eastern European</label>
+            <label><input type="checkbox" class="cuisine" value="european"> European</label>
+        </div>
+        <div class="checkbox-section">
+            <label><input type="checkbox" class="cuisine" value="french"> French</label>
+            <label><input type="checkbox" class="cuisine" value="german"> German</label>
+            <label><input type="checkbox" class="cuisine" value="greek"> Greek</label>
+        </div>
+        <div class="checkbox-section">
+            <label><input type="checkbox" class="cuisine" value="indian"> Indian</label>
+            <label><input type="checkbox" class="cuisine" value="irish"> Irish</label>
+            <label><input type="checkbox" class="cuisine" value="italian"> Italian</label>
+        </div>
+        <div class="checkbox-section">
+            <label><input type="checkbox" class="cuisine" value="japanese"> Japanese</label>
+            <label><input type="checkbox" class="cuisine" value="jewish"> Jewish</label>
+            <label><input type="checkbox" class="cuisine" value="korean"> Korean</label>
+        </div>
+        <div class="checkbox-section">
+            <label><input type="checkbox" class="cuisine" value="latin american"> Latin American</label>
+            <label><input type="checkbox" class="cuisine" value="mediterranean"> Mediterranean</label>
+            <label><input type="checkbox" class="cuisine" value="mexican"> Mexican</label>
+        </div>
+        <div class="checkbox-section">
+            <label><input type="checkbox" class="cuisine" value="middle eastern"> Middle Eastern</label>
+            <label><input type="checkbox" class="cuisine" value="nordic"> Nordic</label>
+            <label><input type="checkbox" class="cuisine" value="southern"> Southern</label>
+        </div>
+        <div class="checkbox-section">
+            <label><input type="checkbox" class="cuisine" value="spanish"> Spanish</label>
+            <label><input type="checkbox" class="cuisine" value="thai"> Thai</label>
+            <label><input type="checkbox" class="cuisine" value="vietnamese"> Vietnamese</label>
+        </div>
+        
+        
+      </div>
+    
+    
+    </form> 
+
+</div>
+
+<button type="submit" id="search-button" style="margin-top: 20px;">Search Recipes</button>
+
+
+
+
+<script>
+document.getElementById('search-button').addEventListener('click', function(event) {
+    // Get the ingredients from the inputs.
+    let ingredients = Array.from(document.getElementsByClassName('ingredient-input'))
+        .map(input => input.value);
+
+    // Collect all selected meal types, diets, intolerances, and cuisines.
+    let mealType = Array.from(document.getElementsByClassName('mealType')).find(checkbox => checkbox.checked)?.value;
+    let diet = Array.from(document.getElementsByClassName('diet')).find(checkbox => checkbox.checked)?.value;
+    let intolerance = Array.from(document.getElementsByClassName('intolerances')).find(checkbox => checkbox.checked)?.value;
+    let cuisine = Array.from(document.getElementsByClassName('cuisine')).find(checkbox => checkbox.checked)?.value;
+
+    // If no ingredients or checkboxes are checked, display an error message and stop the function.
+    if (!ingredients.length && !mealType && !diet && !intolerance && !cuisine) {
+        event.preventDefault();
+
+        let resultsDiv = document.getElementById('results');
+        resultsDiv.innerHTML = '<div>No ingredients or options selected.</div>';
+        return;
+    }
+
+    ingredients = ingredients.join(',');
+
+    // Prepare data to send to the server
+    const data = {
+        ingredients: ingredients,
+        mealType: mealType,
+        diet: diet,
+        intolerances: intolerance,
+        cuisine: cuisine
+    };
+
+    // Make a POST request to your own server, passing the user's search data
+    fetch('/search', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        // 'data' is the response from the API.
+        let resultsDiv = document.getElementById('results');
+
+        // First, clear any old search results.
+        resultsDiv.innerHTML = '';
+
+        // Then, for each recipe, create a new div and add it to the results div.
+        data.results.forEach(recipe => {
+            let recipeDiv = document.createElement('div');
+            recipeDiv.textContent = recipe.title;
+
+            // Assuming 'recipe' object has an 'id' field.
+            recipeDiv.addEventListener('click', () => {
+                window.location.href = `/recipe/${recipe.id}`;
+            });
+
+            resultsDiv.appendChild(recipeDiv);
+        });
+    });
+});
+
+</script>
+
+    
+    
+

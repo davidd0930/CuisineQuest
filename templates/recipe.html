@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ recipe.title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron mt-4">
+            <h1 class="display-4">{{ recipe.title }}</h1>
+            <img class="img-fluid rounded" src="{{ recipe.image }}" alt="{{ recipe.title }}">
+            <hr class="my-4">
+            <h2>Instructions</h2>
+            <p class="lead">{{ recipe.instructions|safe }}</p>
+            <h2>Ingredients</h2>
+            <ul class="list-group list-group-flush">
+            {% for ingredient in recipe.extendedIngredients %}
+                <li class="list-group-item">{{ ingredient.original }}</li>
+            {% endfor %}
+            </ul>
+            <a class="btn btn-primary btn-lg mt-3" href="{{ url_for('index') }}" role="button">Back to Search</a>
+        </div>
+    </div>
+</body>
+</html>

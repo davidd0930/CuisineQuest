@@ -1,0 +1,161 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #ffffff;
+    padding: 50px;
+    text-align: center;
+    position: relative; /* this makes body a positioned element */
+    overflow-x: hidden; /* This will prevent horizontal scroll */
+}
+
+header {
+    text-align: left; /* Align the logo to the left */
+    padding: 10px; /* Adjust as needed */
+}
+
+#logo {
+    position: relative; /* this positions logo relatively to the nearest positioned ancestor, which is body in this case */
+    height: 200px;
+    width: 500px;
+    left: 150px; /* adjust as needed */
+    top: -30px;  /* adjust as needed, negative values move the element up */
+}
+
+.half-bg {
+    background: url('images/backgroundimage.jpg') no-repeat center fixed;
+    background-size: cover;
+    position: absolute; /* changed from fixed to absolute */
+    top: 0;
+    bottom: 0;
+    left: 50%; /* start from the middle */
+    right: 0;
+}
+
+.content {
+    position: relative; /* ensures the content is on top */
+}
+
+h2, h4, h5 {
+    color: #333;
+}
+
+
+h1 {
+    text-align: left;
+    font-size: 2em; /* use em or rem for scalable and accessible font sizing */
+    font-family: 'Arial', sans-serif; /* Arial has a modern and clean look, and sans-serif as a fallback */
+    font-weight: 600; /* a bit more weight for the title */
+    padding-left: 175px;
+    color: #333; /* a less harsh color than black */
+    letter-spacing: 1px; /* adding some space between letters for better readability */
+    text-transform: uppercase; /* makes the title uppercase for style */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* adds a subtle shadow for depth */
+    margin-top: -10px;
+}
+
+
+h2 {
+    text-align: left;
+    font-size: large;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 500;
+}
+
+.ingredient {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ingredient-input {
+    width: 1000px; 
+    padding: 10px;
+    font-size: 1em;
+    margin-right: 10px;
+    border: 1px solid #e1dcdc;
+    border-radius: 5px; 
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-remove-btn {
+    background-color: #92b113;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.add-remove-btn.active {
+    background-color: #92b113;
+    border-radius: 5px;
+}
+
+#search-button {
+    background-color: #92b113;
+    color: #fff;
+    padding: 20px 40px; /* Increase button size */
+    font-size: 1.2em; /* Increase font size */
+    margin-top: 20px;
+    border: none; /* Remove border */
+    border-radius: 5px;
+    cursor: pointer; /* Add pointer cursor */
+}
+
+.ingredient-section {
+    border: 2px solid #f7efef;
+    min-height: 1400px; 
+    width: 80%; 
+    max-width: 1000px; 
+    background-color: #eff2f3;
+    padding: 20px; 
+    margin: 20px auto; 
+    border-radius: 5px;
+    display: block;
+    padding-bottom: 50px; /* Adjust this to your liking */
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+}
+
+h5 {
+    text-align: left;
+    font-size: large;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 500;
+}
+
+.checkbox-section {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.checkbox-section label {
+    flex: 1 0 33%;  
+    text-align: left;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #666; /* Change the text color */
+    cursor: pointer; /* Add this line */
+}
+
+/* Add this to style the checkbox */
+.checkbox-section input[type="checkbox"] {
+    transform: scale(1.2); /* Increase the size */
+    margin-right: 10px; /* Add some space */
+    cursor: pointer; /* Add this line */
+}
+
+.checkbox-last {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+

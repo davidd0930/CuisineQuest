@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipe Search Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Recipe Search Results</h1>
+        <div class="row">
+            {% if recipes|length == 0 %}
+                <div class="col-12 text-center mt-5">
+                    <h2>No Results Found</h2>
+                    <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg mt-4">Back to Search</a>
+                </div>
+            {% else %}
+                {% for recipe in recipes %}
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="{{ recipe.image }}" alt="{{ recipe.title }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ recipe.title }}</h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="{{ url_for('recipe', id=recipe.id) }}" class="btn btn-sm btn-outline-secondary">View Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
