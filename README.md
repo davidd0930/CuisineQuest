@@ -8,31 +8,31 @@ https://cuisinequest-85c1fdebb36a.herokuapp.com/
 
 
 ## Technologies
-Flask
-Python
-CSS
-HTML
-JavaScript
+* Flask
+* Python
+* CSS
+* HTML
+* JavaScript
 
 
 
 ## How to Run (For windows users)
-Clone the repository
-Make sure Python and PIP are installed
-Make a Spoonacular account and get an API KEY
-Make sure you are in the proper directory (within your project folder)
+* Clone the repository
+* Make sure Python and PIP are installed
+* Make a Spoonacular account and get an API KEY
+* Make sure you are in the proper directory (within your project folder)
 ### In Command Prompt Terminal type:
-virtualenv env
-env\Scripts\activate
-pip install flask
-pip install requests
-set SPOONACULAR_API_KEY= your_api_key
-flask run
+* virtualenv env
+* env\Scripts\activate
+* pip install flask
+* pip install requests
+* set SPOONACULAR_API_KEY= your_api_key
+* flask run
 
 ### Note:
 In the "set SPOONACULAR_API_KEY= your_api_key" command make sure you replace "your_api_key with your actual API key
 so it would look something like this:
-set SPOONACULAR_API_KEY= 123456789
+* set SPOONACULAR_API_KEY= 123456789
 
 
 ## Usage
@@ -44,10 +44,12 @@ set SPOONACULAR_API_KEY= 123456789
 5. Click the 'Search Recipes' button at the bottom to find recipes.
 
 ## Final Words
-I am using Spoonacular's API, check out their documentation:
-https://spoonacular.com/food-api/docs#Search-Recipes-Complex
+* I am using Spoonacular's API, check out their documentation:
+* https://spoonacular.com/food-api/docs#Search-Recipes-Complex
 
-Have fun cooking!
+* Due to the fact that I am using Spoonacular's API, I only have access to recipes within their databases, so I won't have access to every recipe in the world
+
+* Have fun cooking!
 
 
 
