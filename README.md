@@ -30,7 +30,7 @@ https://cuisinequest-85c1fdebb36a.herokuapp.com/
 * flask run
 
 ### Note:
-In the "set SPOONACULAR_API_KEY= your_api_key" command make sure you replace "your_api_key with your actual API key
+In the "set SPOONACULAR_API_KEY= your_api_key" command make sure you replace "your_api_key" with your actual API key
 so it would look something like this:
 * set SPOONACULAR_API_KEY= 123456789
 
