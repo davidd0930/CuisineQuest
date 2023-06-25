@@ -22,12 +22,12 @@ https://cuisinequest-85c1fdebb36a.herokuapp.com/
 * Make a Spoonacular account and get an API KEY
 * Make sure you are in the proper directory (within your project folder)
 ### In Command Prompt Terminal type:
-* 'virtualenv env'
-* 'env\Scripts\activate'
-* 'pip install flask'
-* 'pip install requests'
-* 'set SPOONACULAR_API_KEY= your_api_key'
-* 'flask run'
+* virtualenv env
+* env\Scripts\activate
+* pip install flask
+* pip install requests
+* set SPOONACULAR_API_KEY= your_api_key
+* flask run
 
 ### Note:
 In the "set SPOONACULAR_API_KEY= your_api_key" command make sure you replace "your_api_key" with your actual API key
